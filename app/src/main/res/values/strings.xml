@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Blood Bank</string>
+    <string name="blood_bank_word">Blood Bank</string>
+    <string name="slider_text_1">Add your donation request, so others will call and help you</string>
+    <string name="slider_text_2">You can filter your notification with a specific blood type</string>
+    <string name="slider_text_3">You can read useful articles with detailed information, and you can filter them</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget password ?</string>
+    <string name="login">Login</string>
+    <string name="يo_not_have_account">Don’t have an account ?</string>
+    <string name="sign_up_here">register here</string>
+    <string name="name">name</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="blood_type">Blood type</string>
+    <string name="last_donation_date">Last donation date</string>
+    <string name="governorate">Governorate</string>
+    <string name="city">city</string>
+    <string name="password_confirmation">Password confirmation</string>
+    <string name="create_account">Create Account</string>
+    <string name="register">Register</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="new_password">New Password</string>
+    <string name="new_password_confirmation">New pasword confirmation</string>
+    <string name="change">Change</string>
+    <string name="send">Send</string>
+    <string name="home">Home</string>
+    <string name="user">User</string>
+    <string name="notification">Notification</string>
+    <string name="more">more</string>
+    <string name="tab_donation_orders">Donation Orders</string>
+    <string name="tab_articles">Articles</string>
+
+</resources>

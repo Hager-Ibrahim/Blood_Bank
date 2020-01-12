@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="blood_bank_word">بنك الدم</string>
+    <string name="slider_text_1">اضف طلب التبرع الخاص بك بحيث يمكن للاخرين التواصل معك ومساعدتك</string>
+    <string name="slider_text_2">يمكن للتطبيق تبيهك فى حالة وجود فصيلة دم محددة</string>
+    <string name="slider_text_3">ستجد العديد من المقالات المفيدة والتى تحتوى على معلومات مفصلة </string>
+    <string name="mobile">الموبايل</string>
+    <string name="password">كلمة السر</string>
+    <string name="remember_me">تذكرنى</string>
+    <string name="forget_password">هل نسيت كلمة المرور ؟</string>
+    <string name="login">دخول</string>
+    <string name="يo_not_have_account">لا تمتلك حساب ؟</string>
+    <string name="sign_up_here">سجل من هنا</string>
+    <string name="name">الاسم</string>
+    <string name="date_of_birth">تاريخ الميلاد</string>
+    <string name="email">الايميل</string>
+    <string name="blood_type">فصيلة الدم</string>
+    <string name="last_donation_date">اخر تاريخ للتبرع</string>
+    <string name="governorate">المحافظة</string>
+    <string name="city">المدينة</string>
+    <string name="password_confirmation">تاكيد كلمة المرور</string>
+    <string name="create_account">"إنشاء حساب "</string>
+    <string name="register">تسجيل</string>
+    <string name="verification_code">كود التحقق</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="new_password_confirmation">تأكيد كلمة المرور الجديدة</string>
+    <string name="change">تغيير</string>
+    <string name="send">ارسال</string>
+    <string name="home">الرئيسية</string>
+    <string name="user">الملف الشخصى</string>
+    <string name="notification">التنبيهات</string>
+    <string name="more">خيارات</string>
+    <string name="tab_donation_orders">طلبات التبرع</string>
+    <string name="tab_articles">مقالات</string>
+</resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".view.fragments.RegisterFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/SmallTexts"
+        android:layout_marginTop="32dp"
+        android:text="@string/create_account"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/blood_type"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shape_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_birth_date" />
+
+    <EditText
+        android:id="@+id/register_user"
+        style="@style/EditText"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:paddingStart="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintBottom_toBottomOf="@+id/register_user"
+        app:layout_constraintStart_toStartOf="@+id/register_user"
+        app:layout_constraintTop_toTopOf="@+id/register_user" />
+
+    <EditText
+        android:id="@+id/register_email"
+        style="@style/EditText"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="80dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_user" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="@+id/register_email"
+        app:layout_constraintStart_toStartOf="@+id/register_email"
+        app:layout_constraintTop_toTopOf="@+id/register_email" />
+
+    <EditText
+        android:id="@+id/last_donation_date"
+        style="@style/EditText"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/last_donation_date"
+        android:inputType="textMultiLine"
+        android:layout_height="45dp"
+        android:paddingStart="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blood_type" />
+
+
+    <Spinner
+        android:id="@+id/register_governorate_spinner"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shape_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_donation_date" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_blood_drop"
+        app:layout_constraintBottom_toBottomOf="@+id/blood_type"
+        app:layout_constraintStart_toStartOf="@+id/blood_type"
+        app:layout_constraintTop_toTopOf="@+id/blood_type" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="@+id/register_governorate_spinner"
+        app:layout_constraintStart_toStartOf="@+id/register_governorate_spinner"
+        app:layout_constraintTop_toTopOf="@+id/register_governorate_spinner" />
+
+    <EditText
+        android:id="@+id/register_birth_date"
+        style="@style/EditText"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="@string/date_of_birth"
+        android:inputType="date"
+        android:paddingStart="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_email" />
+
+    <ImageView
+        android:id="@+id/imageView777"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/register_birth_date"
+        app:layout_constraintStart_toStartOf="@+id/register_birth_date"
+        app:layout_constraintTop_toTopOf="@+id/register_birth_date" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_last_date"
+        app:layout_constraintBottom_toBottomOf="@+id/last_donation_date"
+        app:layout_constraintStart_toStartOf="@+id/last_donation_date"
+        app:layout_constraintTop_toTopOf="@+id/last_donation_date" />
+
+    <Spinner
+        android:id="@+id/register_city_spinner"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shape_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_governorate_spinner" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="@+id/register_city_spinner"
+        app:layout_constraintStart_toStartOf="@+id/register_city_spinner"
+        app:layout_constraintTop_toTopOf="@+id/register_city_spinner" />
+
+    <EditText
+        android:id="@+id/register_password"
+        style="@style/EditText"
+        android:layout_height="45dp"
+        android:layout_width="0dp"
+        android:text="@string/password"
+        android:layout_marginTop="16dp"
+        android:paddingStart="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_city_spinner" />
+
+    <EditText
+        android:id="@+id/register_new_password"
+        android:layout_height="45dp"
+        style="@style/EditText"
+        android:layout_marginTop="16dp"
+        android:paddingStart="80dp"
+        android:text="@string/password_confirmation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_password" />
+
+    <Button
+        android:id="@+id/register_send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_rectangle"
+        android:text="@string/register"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_new_password"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_password"
+        app:layout_constraintBottom_toBottomOf="@+id/register_new_password"
+        app:layout_constraintStart_toStartOf="@+id/register_new_password"
+        app:layout_constraintTop_toTopOf="@+id/register_new_password" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_password"
+        app:layout_constraintBottom_toBottomOf="@+id/register_password"
+        app:layout_constraintStart_toStartOf="@+id/register_password"
+        app:layout_constraintTop_toTopOf="@+id/register_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
