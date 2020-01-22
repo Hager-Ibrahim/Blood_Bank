@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
-    tools:context=".view.fragments.SliderFragment">
+    tools:context=".view.fragments.splashCycle.SliderFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/login_background"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/login" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/login_image"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_marginStart="8dp"
@@ -38,16 +38,6 @@
         app:srcCompat="@drawable/login_logo" />
 
 
-    <EditText
-        android:id="@+id/login_password"
-        style="@style/EditText"
-        android:inputType="textPassword"
-        android:layout_marginTop="16dp"
-        android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_number" />
 
     <EditText
         android:id="@+id/login_number"
@@ -57,7 +47,36 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/login_image" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/login_mobile_image"
+        style="@style/UserIcon"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintBottom_toBottomOf="@+id/login_number"
+        app:layout_constraintStart_toStartOf="@+id/login_number"
+        app:layout_constraintTop_toTopOf="@+id/login_number" />
+
+
+    <EditText
+        android:id="@+id/login_password"
+        style="@style/EditText"
+        android:layout_marginTop="16dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_number" />
+
+    <ImageView
+        android:id="@+id/login_password_image"
+        style="@style/UserIcon"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_password"
+        app:layout_constraintBottom_toBottomOf="@+id/login_password"
+        app:layout_constraintStart_toStartOf="@+id/login_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_number" />
 
     <CheckBox
         android:id="@+id/login_remeber_checkbox"
@@ -73,7 +92,6 @@
         android:id="@+id/login_forget_password"
         style="@style/SmallTexts"
         android:text="@string/forget_password"
-        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@+id/login_remeber_checkbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.72"
@@ -82,37 +100,23 @@
         app:layout_constraintVertical_bias="0.53" />
 
     <Button
-        android:id="@+id/verification_code_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_rectangle"
+        android:id="@+id/login_button"
+        style="@style/Button"
         android:text="@string/login"
-        android:elevation="40dp"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/login_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_remeber_checkbox"
         app:layout_constraintVertical_bias="0.26999998" />
 
     <TextView
-        android:id="@+id/textView"
-        style="@style/SmallTexts"
-        android:text="@string/يo_not_have_account"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verification_code_send"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <TextView
         android:id="@+id/login_register_here"
         style="@style/SmallTexts"
-        android:layout_marginStart="4dp"
-        android:text="@string/sign_up_here"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        android:text="@string/do_not_have_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:layout_constraintVertical_bias="0.3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

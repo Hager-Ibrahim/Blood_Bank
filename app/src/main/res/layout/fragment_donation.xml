@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragments.DonationFragment">
+    tools:context=".view.fragments.homeCycle.DonationFragment">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -14,28 +14,56 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <SearchView
+    <View
+        android:id="@+id/donation_governorate_view"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/shape_rectangle"
+        android:background="@drawable/shape_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/donation_recycler"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
-        android:id="@+id/searchView2"
+    <Spinner
+        android:id="@+id/donation_governorate_spinner"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_rectangle"
+        app:layout_constraintBottom_toTopOf="@+id/donation_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/donation_governorate_view"
+        app:layout_constraintTop_toTopOf="@+id/donation_governorate_view" />
+
+    <View
+        android:id="@+id/donation_blood_type_view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/shape_rectangle"
+        android:background="@drawable/shape_spinner"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/donation_recycler"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/donation_blood_type_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/shape_rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/donation_blood_type_view"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/donation_blood_type_view"
+        app:layout_constraintTop_toTopOf="@+id/donation_blood_type_view" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/donation_recycler"
@@ -45,5 +73,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView2" />
+        app:layout_constraintTop_toBottomOf="@+id/donation_blood_type_spinner" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/donation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@android:color/white"
+        android:src="@drawable/ic_plus_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

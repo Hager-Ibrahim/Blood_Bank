@@ -2,36 +2,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".view.fragments.SettingFragment"></activity>
-        <activity android:name=".view.fragments.NotificationFragment" />
-        <activity android:name=".view.fragments.UserFragment" />
-        <activity android:name=".view.fragments.DonationFragment" />
-        <activity android:name=".view.fragments.ArticlesFragment" />
-        <activity android:name=".view.fragments.HomeFragment" />
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+
         <activity android:name=".view.activities.HomeActivity">
+
+        </activity>
+
+        <activity android:name=".view.activities.UserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.fragments.VerificationCodeFragment" />
-        <activity android:name=".view.fragments.NewPasswordFragment" />
-        <activity android:name=".view.fragments.RegisterFragment" />
-        <activity android:name=".view.activities.UserActivity" />
-        <activity android:name=".view.fragments.LoginFragment" />
-        <activity android:name=".view.fragments.SliderFragment" />
-        <activity android:name=".view.fragments.SplashFragment" />
-        <activity android:name=".view.activities.SplashActivity" >
 
-        </activity>
+        <activity android:name=".view.activities.SplashActivity"></activity>
     </application>
 
 </manifest>

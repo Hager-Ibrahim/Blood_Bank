@@ -1,8 +1,7 @@
-package com.example.myapplication.view.fragments;
+package com.example.myapplication.view.fragments.splashCycle;
 
 import androidx.fragment.app.Fragment;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -14,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.view.fragments.splashCycle.SliderFragment;
 
 public class SplashFragment extends Fragment {
 

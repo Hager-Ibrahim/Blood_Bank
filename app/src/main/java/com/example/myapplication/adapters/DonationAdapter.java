@@ -1,5 +1,7 @@
 package com.example.myapplication.adapters;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -8,34 +10,51 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.data.model.homeCycle.DonationInfo;
 
-public class DonationAdapter extends RecyclerView.Adapter {
+import java.util.List;
 
+public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.DonationHolder> {
+
+    private Context context ;
+    private List<DonationInfo> donationList;
+
+    public DonationAdapter(Context context, List<DonationInfo> donationList) {
+        this.context = context;
+        this.donationList = donationList;
+    }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+    public DonationHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.item_donation,parent,false);
+        return new DonationHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DonationHolder holder, int position) {
+        holder.donationPatient.setText(donationList.get(position).getPatientName());
+        holder.donationHospital.setText(donationList.get(position).getHospitalName());
+        holder.donationCity.setText(donationList.get(position).getPatientName());
+        holder.donationBloodType.setText("A+");
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return donationList.size();
     }
 
     public class DonationHolder extends RecyclerView.ViewHolder{
 
-        TextView donationText1 , donationText2 ,donationText3;
+        TextView donationPatient, donationHospital, donationCity , donationBloodType;
+
         public DonationHolder(@NonNull View itemView) {
             super(itemView);
-            donationText1 = itemView.findViewById(R.id.donation_text1);
-            donationText2 = itemView.findViewById(R.id.donation_text2);
-            donationText3 = itemView.findViewById(R.id.donation_text3);
+            donationPatient = itemView.findViewById(R.id.donation_patient_name);
+            donationHospital = itemView.findViewById(R.id.donation_hospital_name);
+            donationCity = itemView.findViewById(R.id.donation_city_name);
+            donationBloodType = itemView.findViewById(R.id.donation_blood_type);
         }
     }
 

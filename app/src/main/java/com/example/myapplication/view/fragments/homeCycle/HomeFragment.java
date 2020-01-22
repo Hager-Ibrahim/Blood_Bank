@@ -1,4 +1,4 @@
-package com.example.myapplication.view.fragments;
+package com.example.myapplication.view.fragments.homeCycle;
 
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;

@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.data.models.Article;
+import com.example.myapplication.data.model.Article;
 
 import java.util.List;
 

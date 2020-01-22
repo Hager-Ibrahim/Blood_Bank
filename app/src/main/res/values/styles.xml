@@ -9,18 +9,17 @@
         <item name="windowActionBar">false</item>
     </style>
 
-
     <style name="EditText" >
         <item name="android:textColorHint">@color/colorPrimaryDark</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingStart">80dp</item>
         <item name="android:background">@drawable/shape_rectangle</item>
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">45dp</item>
         <item name="android:layout_marginStart">24dp</item>
         <item name="android:layout_marginEnd">24dp</item>
         <item name="android:textAlignment">viewStart</item>
-
+        <item name="android:layout_marginTop">16dp</item>
     </style>
 
     <style name="SmallTexts" >
@@ -30,9 +29,42 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
     </style>
 
-    <style name="customfontstyle" parent="@android:style/TextAppearance.Small">
+    <style name="CustomFontStyle" parent="@android:style/TextAppearance.Small">
         <item name="android:fontFamily">@font/flat</item>
         <item name="android:textSize">17sp</item>
     </style>
 
+    <style name="UserIcon" >
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginStart">32dp</item>
+    </style>
+
+    <style name="Button" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@drawable/shape_rectangle</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="SpinnerView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/shape_spinner</item>
+    </style>
+
+    <style name="spinner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">60dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/shape_rectangle</item>
+    </style>
 </resources>

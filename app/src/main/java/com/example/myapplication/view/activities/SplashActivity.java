@@ -3,7 +3,7 @@ package com.example.myapplication.view.activities;
 import android.os.Bundle;
 
 import com.example.myapplication.R;
-import com.example.myapplication.view.fragments.SplashFragment;
+import com.example.myapplication.view.fragments.splashCycle.SplashFragment;
 
 public class SplashActivity extends BasicActivity {
 

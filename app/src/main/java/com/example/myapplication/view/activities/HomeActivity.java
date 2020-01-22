@@ -2,16 +2,15 @@ package com.example.myapplication.view.activities;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
-import com.example.myapplication.view.fragments.HomeFragment;
-import com.example.myapplication.view.fragments.NotificationFragment;
-import com.example.myapplication.view.fragments.SettingFragment;
-import com.example.myapplication.view.fragments.UserFragment;
+import com.example.myapplication.view.fragments.homeCycle.HomeFragment;
+import com.example.myapplication.view.fragments.homeCycle.NotificationFragment;
+import com.example.myapplication.view.fragments.homeCycle.SettingFragment;
+import com.example.myapplication.view.fragments.homeCycle.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends BasicActivity {

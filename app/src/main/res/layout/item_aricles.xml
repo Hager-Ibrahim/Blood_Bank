@@ -60,7 +60,7 @@
             app:srcCompat="@drawable/ic_unlike" />
 
         <View
-            android:id="@+id/view"
+            android:id="@+id/register_blood_view"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"

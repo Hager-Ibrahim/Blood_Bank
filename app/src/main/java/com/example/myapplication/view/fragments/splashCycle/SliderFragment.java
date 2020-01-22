@@ -1,11 +1,8 @@
-package com.example.myapplication.view.fragments;
+package com.example.myapplication.view.fragments.splashCycle;
 
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -82,7 +79,6 @@ public class SliderFragment extends Fragment {
                         public void onClick(View view) {
                             Intent intent = new Intent(getActivity(), UserActivity.class);
                             getActivity().startActivity(intent);
-
                         }
                     });
                 }
@@ -104,7 +100,6 @@ public class SliderFragment extends Fragment {
         });
     }
 
-
     private void goToTab(View view , final int position){
         view.findViewById(R.id.slider_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,10 +108,5 @@ public class SliderFragment extends Fragment {
             }
         });
     }
-
-
-
-
-
 
 }

@@ -1,6 +1,4 @@
-package com.example.myapplication.data.models;
-
-import android.graphics.drawable.Drawable;
+package com.example.myapplication.data.model;
 
 public class Article {
 

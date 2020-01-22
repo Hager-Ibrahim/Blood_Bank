@@ -9,8 +9,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.myapplication.R;
-import com.example.myapplication.view.fragments.ArticlesFragment;
-import com.example.myapplication.view.fragments.DonationFragment;
+import com.example.myapplication.view.fragments.homeCycle.ArticlesFragment;
+import com.example.myapplication.view.fragments.homeCycle.DonationFragment;
 
 public class TabsPagerAdapter extends FragmentPagerAdapter {
 

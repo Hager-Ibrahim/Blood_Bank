@@ -3,7 +3,7 @@ package com.example.myapplication.view.activities;
 import android.os.Bundle;
 
 import com.example.myapplication.R;
-import com.example.myapplication.view.fragments.LoginFragment;
+import com.example.myapplication.view.fragments.userCycle.LoginFragment;
 
 public class UserActivity extends BasicActivity {
 

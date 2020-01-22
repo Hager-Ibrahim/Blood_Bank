@@ -5,239 +5,224 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login"
-    tools:context=".view.fragments.RegisterFragment">
+    tools:context=".view.fragments.userCycle.RegisterFragment">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/register_title"
         style="@style/SmallTexts"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/create_account"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/blood_type"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/shape_spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_birth_date" />
-
     <EditText
-        android:id="@+id/register_user"
+        android:id="@+id/register_user_name_edit_text"
         style="@style/EditText"
-        android:layout_height="45dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
         android:hint="@string/name"
         android:inputType="text"
-        android:paddingStart="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/register_title" />
 
     <ImageView
-        android:id="@+id/imageView47"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
+        android:id="@+id/register_user_image"
+        style="@style/UserIcon"
         android:src="@drawable/ic_user"
-        app:layout_constraintBottom_toBottomOf="@+id/register_user"
-        app:layout_constraintStart_toStartOf="@+id/register_user"
-        app:layout_constraintTop_toTopOf="@+id/register_user" />
+        app:layout_constraintBottom_toBottomOf="@+id/register_user_name_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/register_user_name_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/register_user_name_edit_text" />
 
     <EditText
-        android:id="@+id/register_email"
+        android:id="@+id/register_email_edit_text"
         style="@style/EditText"
-        android:layout_marginTop="16dp"
-        android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:paddingStart="80dp"
-        android:layout_height="45dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_user" />
+        app:layout_constraintTop_toBottomOf="@+id/register_user_name_edit_text" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
+        android:id="@+id/register_email_image"
+        style="@style/UserIcon"
         android:src="@drawable/ic_email"
-        app:layout_constraintBottom_toBottomOf="@+id/register_email"
-        app:layout_constraintStart_toStartOf="@+id/register_email"
-        app:layout_constraintTop_toTopOf="@+id/register_email" />
+        app:layout_constraintBottom_toBottomOf="@+id/register_email_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/register_email_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/register_email_edit_text" />
 
     <EditText
-        android:id="@+id/last_donation_date"
+        android:id="@+id/register_birth_date_edit_text"
         style="@style/EditText"
-        android:layout_marginTop="16dp"
-        android:ems="10"
+        android:hint="@string/date_of_birth"
+        android:focusable="false"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_email_edit_text" />
+
+    <ImageView
+        android:id="@+id/register_birth_date_image"
+        style="@style/UserIcon"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/register_birth_date_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/register_birth_date_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/register_birth_date_edit_text" />
+    <View
+        android:id="@+id/register_blood_view"
+        style="@style/SpinnerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_birth_date_edit_text" />
+
+    <Spinner
+        android:id="@+id/register_blood_type_spinner"
+        style="@style/spinner"
+        android:dropDownHeight="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/register_blood_view"
+        app:layout_constraintStart_toEndOf="@+id/register_blood_type_image"
+        app:layout_constraintTop_toBottomOf="@+id/register_birth_date_edit_text" />
+
+    <ImageView
+        android:id="@+id/register_blood_type_image"
+        style="@style/UserIcon"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_blood_drop"
+        app:layout_constraintBottom_toBottomOf="@+id/register_blood_view"
+        app:layout_constraintStart_toStartOf="@+id/register_blood_view"
+        app:layout_constraintTop_toTopOf="@+id/register_blood_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/register_last_donation_date_edit_text"
+        style="@style/EditText"
         android:hint="@string/last_donation_date"
-        android:inputType="textMultiLine"
-        android:layout_height="45dp"
-        android:paddingStart="80dp"
+        android:inputType="date"
+        android:focusable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blood_type" />
+        app:layout_constraintTop_toBottomOf="@+id/register_blood_type_spinner" />
+
+    <ImageView
+        android:id="@+id/register_last_donate_image_view"
+        style="@style/UserIcon"
+        android:src="@drawable/ic_last_date"
+        app:layout_constraintBottom_toBottomOf="@+id/register_last_donation_date_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/register_last_donation_date_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/register_last_donation_date_edit_text" />
 
 
-    <Spinner
-        android:id="@+id/register_governorate_spinner"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/shape_spinner"
+    <View
+        android:id="@+id/register_governorate_view"
+        style="@style/SpinnerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/last_donation_date" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
-        android:src="@drawable/ic_blood_drop"
-        app:layout_constraintBottom_toBottomOf="@+id/blood_type"
-        app:layout_constraintStart_toStartOf="@+id/blood_type"
-        app:layout_constraintTop_toTopOf="@+id/blood_type" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
-        android:src="@drawable/ic_home"
-        app:layout_constraintBottom_toBottomOf="@+id/register_governorate_spinner"
-        app:layout_constraintStart_toStartOf="@+id/register_governorate_spinner"
-        app:layout_constraintTop_toTopOf="@+id/register_governorate_spinner" />
-
-    <EditText
-        android:id="@+id/register_birth_date"
-        style="@style/EditText"
-        android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:hint="@string/date_of_birth"
-        android:inputType="date"
-        android:paddingStart="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_email" />
-
-    <ImageView
-        android:id="@+id/imageView777"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
-        android:src="@drawable/ic_calendar"
-        app:layout_constraintBottom_toBottomOf="@+id/register_birth_date"
-        app:layout_constraintStart_toStartOf="@+id/register_birth_date"
-        app:layout_constraintTop_toTopOf="@+id/register_birth_date" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
-        android:src="@drawable/ic_last_date"
-        app:layout_constraintBottom_toBottomOf="@+id/last_donation_date"
-        app:layout_constraintStart_toStartOf="@+id/last_donation_date"
-        app:layout_constraintTop_toTopOf="@+id/last_donation_date" />
+        app:layout_constraintTop_toBottomOf="@+id/register_last_donation_date_edit_text" />
 
     <Spinner
-        android:id="@+id/register_city_spinner"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/shape_spinner"
+        android:id="@+id/register_governorate_spinner"
+        style="@style/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/register_governorate_view"
+        app:layout_constraintStart_toEndOf="@+id/register_governorate_image"
+        app:layout_constraintTop_toBottomOf="@+id/register_last_donation_date_edit_text" />
+
+    <ImageView
+        android:id="@+id/register_governorate_image"
+        style="@style/UserIcon"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="@+id/register_governorate_view"
+        app:layout_constraintStart_toStartOf="@+id/register_governorate_view"
+        app:layout_constraintTop_toTopOf="@+id/register_governorate_view" />
+
+    <View
+        android:id="@+id/register_city_view"
+        style="@style/SpinnerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_governorate_spinner" />
 
+    <Spinner
+        android:id="@+id/register_city_spinner"
+        style="@style/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/register_city_view"
+        app:layout_constraintStart_toEndOf="@+id/register_city_image"
+        app:layout_constraintTop_toBottomOf="@+id/register_governorate_spinner" />
+
+
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
+        android:id="@+id/register_city_image"
+        style="@style/UserIcon"
         android:src="@drawable/ic_home"
-        app:layout_constraintBottom_toBottomOf="@+id/register_city_spinner"
-        app:layout_constraintStart_toStartOf="@+id/register_city_spinner"
-        app:layout_constraintTop_toTopOf="@+id/register_city_spinner" />
+        app:layout_constraintBottom_toBottomOf="@+id/register_city_view"
+        app:layout_constraintStart_toStartOf="@+id/register_city_view"
+        app:layout_constraintTop_toTopOf="@+id/register_city_view" />
+
 
     <EditText
-        android:id="@+id/register_password"
+        android:id="@+id/register_number_edit_text"
         style="@style/EditText"
-        android:layout_height="45dp"
-        android:layout_width="0dp"
-        android:text="@string/password"
-        android:layout_marginTop="16dp"
-        android:paddingStart="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_city_spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/register_city_view" />
+
+    <ImageView
+        android:id="@+id/register_number_image"
+        style="@style/UserIcon"
+        android:layout_height="40dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintBottom_toBottomOf="@+id/register_number_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/register_number_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/register_number_edit_text"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/register_new_password"
-        android:layout_height="45dp"
+        android:id="@+id/register_password_edit_text"
         style="@style/EditText"
-        android:layout_marginTop="16dp"
-        android:paddingStart="80dp"
+        android:inputType="textPassword"
+        android:text="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_number_edit_text" />
+
+    <EditText
+        android:id="@+id/register_confirm_password"
+        style="@style/EditText"
+        android:inputType="textPassword"
         android:text="@string/password_confirmation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_password" />
+        app:layout_constraintTop_toBottomOf="@+id/register_password_edit_text" />
+
+
+
+    <ImageView
+        android:id="@+id/register_confirm_password_image"
+        style="@style/UserIcon"
+        android:src="@drawable/ic_password"
+        app:layout_constraintBottom_toBottomOf="@+id/register_confirm_password"
+        app:layout_constraintStart_toStartOf="@+id/register_confirm_password"
+        app:layout_constraintTop_toTopOf="@+id/register_confirm_password" />
+
+    <ImageView
+        android:id="@+id/register_password_image"
+        style="@style/UserIcon"
+        android:src="@drawable/ic_password"
+        app:layout_constraintBottom_toBottomOf="@+id/register_password_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/register_password_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/register_password_edit_text" />
 
     <Button
-        android:id="@+id/register_send_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/shape_rectangle"
+        android:id="@+id/register_button"
+        style="@style/Button"
         android:text="@string/register"
-        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_new_password"
+        app:layout_constraintTop_toBottomOf="@+id/register_confirm_password"
         app:layout_constraintVertical_bias="0.32999998" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
-        android:src="@drawable/ic_password"
-        app:layout_constraintBottom_toBottomOf="@+id/register_new_password"
-        app:layout_constraintStart_toStartOf="@+id/register_new_password"
-        app:layout_constraintTop_toTopOf="@+id/register_new_password" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="32dp"
-        android:src="@drawable/ic_password"
-        app:layout_constraintBottom_toBottomOf="@+id/register_password"
-        app:layout_constraintStart_toStartOf="@+id/register_password"
-        app:layout_constraintTop_toTopOf="@+id/register_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
