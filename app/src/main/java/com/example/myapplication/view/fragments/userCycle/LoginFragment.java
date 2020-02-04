@@ -71,7 +71,9 @@ public class LoginFragment extends Fragment {
                         getContext(),
                         getActivity().getSupportFragmentManager(),
                         R.id.user_fragment_container,
-                        new HomeFragment());
+                        new HomeFragment(),
+                        null,
+                        null);
             }
         });
 

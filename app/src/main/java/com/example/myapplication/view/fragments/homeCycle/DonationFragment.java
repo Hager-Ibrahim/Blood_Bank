@@ -1,67 +1,107 @@
 package com.example.myapplication.view.fragments.homeCycle;
 
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Spinner;
 
-import com.example.myapplication.R;
-import com.example.myapplication.adapters.DonationAdapter;
-import com.example.myapplication.data.model.homeCycle.DonationInfo;
-import com.example.myapplication.utilities.MostUsedMethods;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.example.myapplication.R;
+import com.example.myapplication.adapters.SpinnerCustomAdapter;
+import com.example.myapplication.data.model.homeCycle.DonationInfo;
+import com.example.myapplication.data.model.homeCycle.PageData;
+import com.example.myapplication.data.retrofit.ApiClient;
+import com.example.myapplication.data.retrofit.ApiInterface;
+import com.example.myapplication.utilities.MostUsedMethods;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+import static com.example.myapplication.data.retrofit.ApiClient.getClient;
 
 public class DonationFragment extends Fragment {
 
+    SpinnerCustomAdapter bloodTypeAdapter, governorateAdapter;
+
+    @BindView(R.id.donation_governorate_spinner)
+    Spinner donationGovernorateSpinner;
+    @BindView(R.id.donation_blood_type_spinner)
+    Spinner donationBloodTypeSpinner;
+    @BindView(R.id.donation_recycler)
     RecyclerView donationRecycler;
-    Spinner bloodSpinner, governorateSpinner;
+    @BindView(R.id.donation_button)
+    FloatingActionButton donationButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_donation, container, false);
+        View view = inflater.inflate(R.layout.fragment_donation, container, false);
 
-        bloodSpinner = view.findViewById(R.id.donation_blood_type_spinner);
-        governorateSpinner = view.findViewById(R.id.donation_governorate_spinner);
+        ButterKnife.bind(this, view);
+        bloodTypeAdapter = new SpinnerCustomAdapter(getContext());
+        governorateAdapter = new SpinnerCustomAdapter(getContext());
 
-        setDonationRecycler(view);
+        setDonationRecycler();
         setSpinners();
-        addDonation(view);
-
         return view;
     }
 
-    private void addDonation(View view){
-        view.findViewById(R.id.donation_button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container,
-                        new DonationOrderFragment()).commit();
 
-            }
-        });
+    private void setSpinners() {
+        MostUsedMethods.getSpinnerData(
+                getClient().create(ApiInterface.class).getBloodTypeList(),
+                bloodTypeAdapter,
+                getActivity().getResources().getString(R.string.blood_type),
+                donationBloodTypeSpinner);
+
+        MostUsedMethods.getSpinnerData(
+                getClient().create(ApiInterface.class).getGovernorates(),
+                governorateAdapter,
+                getActivity().getResources().getString(R.string.governorate),
+                donationGovernorateSpinner
+        );
     }
 
-    private void setSpinners(){
+    private void setDonationRecycler() {
 
+        MostUsedMethods.setDonationRecycler(getContext(),0,0,donationRecycler);
+
+        MostUsedMethods.setSpinnerListener(
+                donationGovernorateSpinner,
+                null,
+                governorateAdapter,
+                getContext(),
+                null,
+                0,
+                null,
+                donationRecycler
+                );
+        MostUsedMethods.setSpinnerListener(
+                donationBloodTypeSpinner,
+                null,
+                bloodTypeAdapter,
+                getContext(),
+                null,
+                0,
+                null,
+                donationRecycler
+        );
 
     }
-    private void setDonationRecycler(View view){
 
-        ArrayList<DonationInfo> donations = new ArrayList<>();
-        donations.add(new DonationInfo("اسم الحالة", "مستشفى " ,"المدينة", "B+"));
-        donations.add(new DonationInfo("اسم الحالة", "مستشفى " ,"المدينة", "A+"));
-        donations.add(new DonationInfo("اسم الحالة", "مستشفى " ,"المدينة", "O+"));
-        donations.add(new DonationInfo("اسم الحالة", "مستشفى " ,"المدينة", "A+"));
+    @OnClick(R.id.donation_button)
+    public void onViewClicked() {
+        MostUsedMethods.replaceFragment(
+                getActivity().getSupportFragmentManager(),
+                R.id.home_fragment_container,
+                new DonationOrderFragment());
 
-        donationRecycler = view.findViewById(R.id.donation_recycler);
-        donationRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        donationRecycler.setAdapter(new DonationAdapter(getContext(),donations));
     }
 }

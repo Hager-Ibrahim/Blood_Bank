@@ -7,10 +7,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
+import com.example.myapplication.view.fragments.homeCycle.EditProfileFragment;
 import com.example.myapplication.view.fragments.homeCycle.HomeFragment;
 import com.example.myapplication.view.fragments.homeCycle.NotificationFragment;
 import com.example.myapplication.view.fragments.homeCycle.SettingFragment;
-import com.example.myapplication.view.fragments.homeCycle.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends BasicActivity {
@@ -39,7 +39,7 @@ public class HomeActivity extends BasicActivity {
                         selectedFragment = new HomeFragment();
                         break;
                     case R.id.nav_user:
-                        selectedFragment = new UserFragment();
+                        selectedFragment = new EditProfileFragment();
                         break;
                     case R.id.nav_notifications:
                         selectedFragment = new NotificationFragment();

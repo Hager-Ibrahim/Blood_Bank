@@ -41,5 +41,20 @@
     <string name="choose_governorate">Choose governorate</string>
     <string name="choose_blood_type">Choose blood type</string>
     <string name="choose_city">Choose city</string>
+    <string name="patient_name">Patient name</string>
+    <string name="hospital">Hospital</string>
+    <string name="category">Category</string>
+    <string name="search">Search here</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="address">Address</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="favourites">Favourites</string>
+    <string name="contact_us">Contact us</string>
+    <string name="about_application">About Application</string>
+    <string name="notification_setting">Notification Setting</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="setting">Setting</string>
 
 </resources>

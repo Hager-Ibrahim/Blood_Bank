@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.myapplication.R;
-import com.example.myapplication.view.fragments.homeCycle.ArticlesFragment;
+import com.example.myapplication.view.fragments.homeCycle.PostsFragment;
 import com.example.myapplication.view.fragments.homeCycle.DonationFragment;
 
 public class TabsPagerAdapter extends FragmentPagerAdapter {
@@ -28,11 +28,11 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new ArticlesFragment();
+                return new PostsFragment();
             case 1:
                 return new DonationFragment() ;
             default:
-                return new ArticlesFragment();
+                return new PostsFragment();
         }
     }
 

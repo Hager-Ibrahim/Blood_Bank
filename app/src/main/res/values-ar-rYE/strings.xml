@@ -42,4 +42,16 @@
     <string name="choose_governorate">اختر المحافظة</string>
     <string name="choose_blood_type">اختر فصيلة الدم</string>
     <string name="choose_city">اختر المدينة</string>
+    <string name="patient_name">اسم الحاله</string>
+    <string name="hospital">المستشفى</string>
+    <string name="category">الفئة</string>
+    <string name="search">ابحث هنا</string>
+    <string name="address">العنوان</string>
+    <string name="edit_profile">تعديل البيانات</string>
+    <string name="favourites">المفضلة</string>
+    <string name="contact_us">تواصل معنا</string>
+    <string name="about_application">عن التطبيق</string>
+    <string name="notification_setting">اعدادات الاشعارات</string>
+    <string name="sign_out">تسجيل الخروج</string>
+    <string name="setting">الاعدادات</string>
 </resources>
